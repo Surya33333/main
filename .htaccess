@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://vmart.life/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://vmart.life$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.vmart.life/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.vmart.life$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://vmart.life/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://vmart.life$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.vmart.life/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.vmart.life$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp|csv|xlsx)$ https://vmart.life# [R,NC]

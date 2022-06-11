@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>SENDIT</title> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+       <!-- NAVIGATION --> 
+
+  <nav class="navbar navbar-expand-lg" style="overflow: hidden; top: 0; width:100%; ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bi bi-list" style="color: rgb(163, 163, 163)"></span>
+      </button>
+      <div  class="collapse navbar-collapse" id="navbarSupportedContent" style="color:white;">
+        <ul id="nav" class="navbar-nav me-auto mb-2 mb-lg-0" style="display: flex;">
+            <li class="nav-link" type="button"><a   class="nav-item" onclick="window.scrollTo(0,0)">Home</a></li>
+            <li class="nav-link"  type="button"><a  class="nav-item" onclick="window.scrollTo(0, 550)">Services</a></li>
+            <li class="nav-link"  type="button"><a  href="pricing.html" class="nav-item">Pricing</a></li>
+            <li class="nav-link"  type="button"><a  href="stores.html" class="nav-item">Stores</a></li>
+            <li class="nav-link"  type="button"><a  href="track.html" class="nav-item">Track</a></li>
+            <li class="nav-link"  type="button"><a  href="aboutus.html" class="nav-item">About Us</a></li>
+            <li class="nav-link"  type="button"  id="contact"><a   id="contact" onclick="window.scrollTo(10000, 10000)" class="nav-item">Contact Us</a></li>
+          </li>
+        </ul>
+        <b type="button" class="navbar-brand" style="color:rgb(0, 0, 0); padding-right: 40px;" onlcick="window.location.href=`index.html`" title="SENDIT.COM">SEND IT</b>
+      </div>
+    </div>
+  </nav>
+<br>
+
+<!-- Div 1-->
+
+  <div id="intr" style="background-color: #222222; display:flex; padding:100px;">
+    <div id="introtext" class="animate-reveal"> 
+      <h4>Get Started with your first shimpment now.</h4> 
+      <small>We help you to send your shipments anywhere .</small>
+    </div>
+  
+    <div id="basicform">
+      <form id="createorder" class="form">
+        <h1 style="color:black"><b>GET STARTED</b></h1><hr>
+      <div class="form-field">
+        <input type="text" name="username" id="username" autocomplete="on" placeholder="Name">
+        <small></small>
+      </div>
+      <div class="form-field">
+        <input type="number" name="mobile" id="mobile" autocomplete="on" placeholder="Mobile No" maxlength="10">
+        <small></small>
+      </div>
+      <div class="form-field"> 
+        <input type="number" name="from" id="from" autocomplete="on" placeholder="From Pincode" maxlength="6">
+        <small></small>
+      </div>
+      <div class="form-field"> 
+        <input type="number" name="to" id="to" autocomplete="on" placeholder="To Pincode" maxlength="6">
+        <small></small>
+      </div>
+      <div class="form-field">
+        <input type="submit" name="submit" onclick="validateform()" value="Place Shipment" style="background-color: #000000; color: aliceblue;">
+      </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+<div id="services">
+  <b><h1 class="title"><b>SERVICES WE OFFER</b></h1>
+  <div id="rows" class="row row-cols-1 row-cols-md-4">
+    <div class="col">
+      <div class="card">
+        <img src="C:\xampp\htdocs\PROJECT\Main\direct.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">DIRECT</h5>
+          <p class="card-text">Find a near by SENDIT service center and schedule your shipment</p>
+          <button class="btn btn-secondary" onclick="document.location.href='stores.html'">BOOK NOW</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="C:\xampp\htdocs\PROJECT\Main\deliveryboy.png" class="card-img-top h-75">
+        <div class="card-body">
+          <h5 class="card-title">PICKUP DELIVER</h5>
+          <p class="card-text">We will be at your doorstep to pick up your delivery for shipment</p>
+          <button class="btn btn-secondary" onclick="document.location.href='pick&deliver.html'">BOOK NOW</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="C:\xampp\htdocs\PROJECT\Main\sunset-5357877__340.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">E-COMMERCE</h5>
+          <p class="card-text">Integrate your Ecommerce platform with us for quicker shipments of your orders to your customers with in time.</p>
+          <button class="btn btn-secondary" onclick="document.location.href='stores.html'">BOOK NOW</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="C:\xampp\htdocs\PROJECT\Main\sunset-5357877__340.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">PACKERS & MOVERS</h5>
+          <p class="card-text">Moving to somwhere else..? <br>We are here to help you with most reasonable price and at time delivery service..</p>
+          <button class="btn btn-secondary" onclick="document.location.href='stores.html'">BOOK NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<!-- Div 3-->
+
+  <div id="videocontent">
+    <div id="video">
+      <iframe width="100%"   height="50%" src = "video.mp4" allowfullscreen aria-controls="on"></iframe>
+   </div>
+      <div id="content">
+        We are always ready to start..!
+      </div>
+  </div>
+
+
+<div id="footer">
+  <div class="py-3 my-4" style="margin: auto;">
+    <p><h3><b>SENDIT</b></h3></p>
+    <p>Send it provides the best logistic services from your location to each and every state in India</p>
+  </div>
+  <div class="py-3 my-4" style="margin:auto">
+  <form  id="contactform" method="post">
+    <div class="form-field" style="text-decoration: solid;"><h6><b>CONTACT US</b></h6></div>
+    <div class="form-field"><input type="email" name="emailid" id="emailid" class="form-field" placeholder="Email ID" autocomplete="on"><small></small></div>
+    <div class="form-field"><input type="text" name="message" id="message" class="form-field" placeholder="Your Message" autocomplete="off"><small></small></div>
+    <div class="form-field"><input type="submit" name="submit"  name="Submit" onclick="validateform()" style="background-color:rgb(0, 0, 0); color: white;"></button></div>
+  </form>
+  </div>
+</div>
+
+
+  <footer class="row-gp-3" style="padding:0px;">
+    <ul class="nav">
+      <li class="nav-item footer"><a href="#" class="nav-footer">Home</a></li>
+      <li class="nav-item footer"><a href="#" class="nav-footer">Features</a></li>
+      <li class="nav-item footer"><a href="#" class="nav-footer">Pricing</a></li>
+      <li class="nav-item footer"><a href="#" class="nav-footer">FAQs</a></li>
+      <li class="nav-item footer"><a href="#" class="nav-footer">About</a></li>
+    </ul>
+  </footer>
+
+
+<div id="socialmedia" style="padding:10px; margin:auto;">
+      <div style="padding:10px; float: right;">
+      <i class="bi bi-facebook" type="button" onclick="window.location.href='https://facebook.com'"></i>
+      <i class="bi bi-twitter" type="button" onclick="window.location.href='https://twitter.com'"></i>
+      <i class="bi bi-instagram" type="button" onclick="window.location.href='https://instagram.com'"></i>
+    
+  </div>
+</div>
+<hr>
+
+
+
+</body>
+
+    </html>
